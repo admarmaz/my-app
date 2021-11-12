@@ -1,0 +1,33 @@
+.TopBar{
+    
+    width: 100%;
+    height: 4rem;
+    background-color: grey;
+    display: flex;
+}
+
+.TopBar-button{
+    width: 4rem;
+    height: 4rem;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+.TopBar-elements{
+    align-items: flex-end;
+}
+
+.TopBar-element{
+    text-decoration: none;
+    margin-right: 1em;
+}
+
+.topbar-search-section{
+    justify-items: left;
+   
+}
