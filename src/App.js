@@ -5,6 +5,8 @@ import './Footer.css';
 import './Slider.css';
 import React from 'react';
 import SimpleImageSlider from "react-simple-image-slider";
+import Login from "./containers/Login";
+
 
 const images = [
   { url: "hexagon.jpg" },
@@ -32,10 +34,15 @@ const images = [
   
 } */
 
+
 class TopBar extends React.Component {
 
   state = {
     show: true
+  }
+
+  toogleShow(show) {
+    this.setState({ show: show })
   }
 
   render() {
@@ -52,7 +59,7 @@ class TopBar extends React.Component {
             Buscador
           </nav>
 
-          <button className="TopBar-button" onClick={() => this.setState({ show: true })}></button>
+          <button className="TopBar-button" onClick={() => this.toogleShow(false)}></button>
 
         </div>
       )
@@ -78,35 +85,18 @@ function Footer(){
   )
 }
 
+
 function App() {
   return (
     
     <div className="App">
-      <div> <TopBar/></div>
-      <div className="">
-        <SimpleImageSlider
-          width= '100%'
-          height= '30%'
-          images={images}
-          showBullets={true}
-          showNavs={true} 
-        />
-      </div>
       
       <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+        <div> <Login/> </div>
+
       </header>
-      <div> <Footer/> </div>
+      
     </div>
 
   );

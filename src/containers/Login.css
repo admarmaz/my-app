@@ -1,0 +1,38 @@
+@media all and (min-width: 480px) {
+    .Login {
+      padding: 60px 0;
+    }
+  
+    .Login form {
+      margin: 0 auto;
+      max-width: 320px;
+    }
+
+    .form-control{
+      padding: .5rem;
+    }
+
+    .form-control:focus{
+      box-shadow: none;
+      border-color: #007bff;
+    }
+
+    .form-fill{
+      padding: .5rem;
+    }
+
+
+    .login-button{
+      width: 100%;
+      padding: 0.5em 0.5em;
+      margin-top: 1em;
+      background-color: #32cf52;
+      border-radius: 100px;
+      transition: all 0.3s ease-in-out 0s;
+      cursor: pointer;
+    
+    }
+    
+
+   
+  }
