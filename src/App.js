@@ -75,8 +75,8 @@ function App() {
 
   <Router>
     <div className="App">
-    
       <Switch>
+
         <AuthRoute path="/login" type="guest">
           <LoginPage />
         </AuthRoute>
@@ -88,7 +88,6 @@ function App() {
       </Switch>
 
     </div>
-
   </Router>
 
 </Provider>
