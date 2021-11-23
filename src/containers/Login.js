@@ -17,8 +17,26 @@ export default function Login() {
   
     try {
 
-      await Auth.signIn(email, password);
-      alert("Logged in");
+      const response = await fetch("https://api.rodeoworld.co.uk/businesses/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+      });
+      const data = await response.json();
+
+      console.log(data);
+      
+      if (data.success) {
+        Auth.setToken(data.token);
+        window.location.href = "/";
+      } else {
+        alert(data.message);
+      }
 
     } catch (e) {
       alert(e.message);
