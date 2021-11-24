@@ -4,8 +4,10 @@ import './TopBar.css';
 import './Footer.css';
 import './Slider.css';
 import React from 'react';
-import SimpleImageSlider from "react-simple-image-slider";
 import Login from "./containers/Login";
+import Venues from './containers/Venues';
+import { BrowserRouter as Router, Route, Routes, Link, u } from "react-router-dom";
+
 
 
 const images = [
@@ -35,6 +37,7 @@ const images = [
 } */
 
 
+/** 
 class TopBar extends React.Component {
 
   state = {
@@ -70,6 +73,8 @@ class TopBar extends React.Component {
 
 }
 
+*/
+
 
 function Footer(){
   return (
@@ -91,11 +96,20 @@ function App() {
     
     <div className="App">
       
-      <header className="App-header">
+      <Router>
 
-        <div> <Login/> </div>
+        <nav className="App-nav">  
+          <Link to="/">Inicio</Link>
+          <Link to="/venues"> Venues </Link>
+        </nav>
 
-      </header>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/venues" element={<Venues />} />
+          <Route path="*" element={<div>Not found</div>} />
+        </Routes>
+        
+      </Router>
       
     </div>
 

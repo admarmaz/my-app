@@ -3,10 +3,13 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "./Login.css";
 import { Auth } from "jsonwebtoken";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  
+  let navigate = useNavigate();
 
   function validateForm() {
     return email.length > 0 && password.length > 0;
@@ -31,9 +34,11 @@ export default function Login() {
 
       console.log(data);
       
-      if (data.success) {
-        Auth.setToken(data.token);
-        window.location.href = "/";
+      if (data) {
+        localStorage.setItem("token", data.token);
+        console.log(data.token);
+        
+        
       } else {
         alert(data.message);
       }
