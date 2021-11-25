@@ -4,18 +4,32 @@ import './TopBar.css';
 import './Footer.css';
 import './Slider.css';
 import React from 'react';
-import './containers/Authentication'
 import Login from "./containers/Login";
-import { connect } from "react-redux";
+import Venues from './containers/Venues';
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 
-const images = [
-  { url: "hexagon.jpg" },
-  { url: "autumn.jpg" },
+/* function TopBar(props){
+  return (
+  <div className= "TopBar">
+    
+    <nav className="TopBar-elements">
+      <a href="#" className="TopBar-element">Descrubre {props.myTopBar}</a>
+      <a href="#" className="TopBar-element">Quienes somos</a>
+      <a href="#" className="TopBar-element">Planes {props.myTopBar}</a>
+    </nav>
+
+    <nav className="topbar-search-section">
+      Buscador
+    </nav>
+
+  </div>  
+  )
   
-];
+} */
 
 
+/** 
 class TopBar extends React.Component {
 
   state = {
@@ -52,6 +66,8 @@ class TopBar extends React.Component {
 }
 
 
+
+
 function Footer(){
   return (
     <div className="footer">
@@ -66,31 +82,30 @@ function Footer(){
   )
 }
 
+*/
+
 
 function App() {
   return (
 
-
-<Provider store={store}>
-
-  <Router>
     <div className="App">
-      <Switch>
+      
+      <Router>
 
-        <AuthRoute path="/login" type="guest">
-          <LoginPage />
-        </AuthRoute>
+        <nav className="App-nav">  
+          <Link to="/">Inicio</Link>
+          <Link to="/venues"> Venues </Link>
+        </nav>
 
-        <AuthRoute path="/home" render={HomePage} type="private" />
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/venues" element={<Venues /> } />
+          <Route path="*" element={<div>Not found</div>} />
+        </Routes>
         
-        <Route path="/" render={IndexPage} />
-
-      </Switch>
-
+      </Router>
+      
     </div>
-  </Router>
-
-</Provider>
 
   );
 }
