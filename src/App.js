@@ -6,6 +6,7 @@ import './Slider.css';
 import React from 'react';
 import Login from "./containers/Login";
 import Venues from './containers/Venues';
+import Offers from './containers/Offers';
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 
@@ -95,11 +96,13 @@ function App() {
         <nav className="App-nav">  
           <Link to="/">Inicio</Link>
           <Link to="/venues"> Venues </Link>
+          <Link to="/offers"> Ofertas </Link>
         </nav>
 
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/venues" element={<Venues /> } />
+          <Route path="/offers" element={<Offers /> } />
           <Route path="*" element={<div>Not found</div>} />
         </Routes>
         

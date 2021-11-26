@@ -1,38 +1,50 @@
 @media all and (min-width: 480px) {
-    .Login {
-      padding: 60px 0;
-    }
-  
-    .Login form {
-      margin: 0 auto;
-      max-width: 320px;
-    }
 
-    .form-control{
-      padding: .5rem;
-    }
-
-    .form-control:focus{
-      box-shadow: none;
-      border-color: #007bff;
-    }
-
-    .form-fill{
-      padding: .5rem;
-    }
-
-
-    .login-button{
-      width: 100%;
-      padding: 0.5em 0.5em;
-      margin-top: 1em;
-      background-color: #32cf52;
-      border-radius: 100px;
-      transition: all 0.3s ease-in-out 0s;
-      cursor: pointer;
-    
-    }
-    
-
-   
+  .Login {
+    padding: 60px 0;
+    background-color: #282c34;
   }
+
+  .Login form {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+
+  .form-control{
+    padding: .5rem;
+  }
+
+  .form-control:focus{
+    box-shadow: none;
+    border-color: #007bff;
+  }
+
+  .form-fill{
+    padding: .5rem 0;
+    color: #fff;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-label{
+    margin-bottom: .3rem;
+  }
+
+  .login-button{
+    border: none;
+    border-radius: 100px;
+    background-color: #32cf52;;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 0.65rem 0.65rem;
+    margin-top: 1em;
+    border-radius: 100px;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+  
+  }
+   
+}

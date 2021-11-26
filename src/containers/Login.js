@@ -47,7 +47,7 @@ export default function Login() {
     <div className="Login">
       <Form onSubmit={handleSubmit}>
         <Form.Group size="lg" controlId="email" className="form-fill">
-          <Form.Label>Email</Form.Label>
+          <Form.Label>Correo electrónico</Form.Label>
           <Form.Control
             autoFocus
             type="email"
@@ -56,7 +56,7 @@ export default function Login() {
           />
         </Form.Group>
         <Form.Group size="lg" controlId="password" className="form-fill">
-          <Form.Label>Password</Form.Label>
+          <Form.Label>Contraseña</Form.Label>
           <Form.Control
             type="password"
             value={password}
@@ -64,7 +64,7 @@ export default function Login() {
           />
         </Form.Group>
         <Button block size="lg" type="submit" disabled={!validateForm()} className="login-button">
-          Login
+          Entrar
         </Button>
       </Form>
     </div>
