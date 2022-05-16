@@ -7,7 +7,7 @@ import React from 'react';
 import Login from "./containers/Login";
 import Venues from './containers/Venues';
 import Offers from './containers/Offers';
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 
 /* function TopBar(props){
@@ -66,11 +66,9 @@ class TopBar extends React.Component {
 
 }
 
-
-
+*/
 
 function Footer(){
-  return (
     <div className="footer">
 
       <div className="footer-elements">
@@ -80,10 +78,7 @@ function Footer(){
       </div>
         
     </div>
-  )
 }
-
-*/
 
 
 function App() {
@@ -92,12 +87,6 @@ function App() {
     <div className="App">
       
       <Router>
-
-        <nav className="App-nav">  
-          <Link to="/">Inicio</Link>
-          <Link to="/venues"> Venues </Link>
-          <Link to="/offers"> Ofertas </Link>
-        </nav>
 
         <Routes>
           <Route path="/" element={<Login />} />
